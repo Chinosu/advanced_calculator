@@ -1,7 +1,7 @@
 FROM node
 WORKDIR /express-docker
-COPY package.json .
+COPY calculator_service/package.json .
 RUN npm install
-COPY . .
+COPY calculator_service .
 EXPOSE 3000
 CMD ["npx", "tsx", "src/index.ts"]
